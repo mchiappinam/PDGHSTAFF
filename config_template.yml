@@ -1,0 +1,410 @@
+###Copyright PDGH Minecraft Servers & HostLoad © 2013-XXXX
+###Todos os direitos reservados
+###Uso apenas para a PDGH.com.br e https://HostLoad.com.br
+###Caso você tenha acesso a esse sistema, você é privilegiado!
+#Quer entender como funciona esse plugin? Analise as mensagens de ajuda no final dessa config (/staff)!
+lobby: false #true=não limpa seu inventário e não te da os itens ao digitar o comando /login ou /logar
+permissionsEx: true #false=um comando será executado para adicionar/remover as permissões, true=api do PermissionsEx será usada. Use false caso não tenha o PermissionsEx
+add: "manuaddp {player} {perm}" #isso é útil apenas se você não utilizar o PermissionsEx
+rmv: "manudelp {player} {perm}" #isso é útil apenas se você não utilizar o PermissionsEx
+VaultSTAFFBRDemote: true #remover money pelo Vault ao digitar o comando /staff brdemote <nick>
+STAFFDropItensOnDeath: false #quem tiver a permissão pdgh.admin não dropa itens se estiver em false
+removedorDeBlocos: #item da staff que remove blocos
+  mundos: #mundos liberados
+  - "plotworld"
+  - "world_cidade"
+  blocos:
+  - 7
+  - 68 #placa
+  - 63 #placa
+  remocaoInteligenteJogadorInativo:
+    ativado: true #verifica juntamente com o sistema de clan (tempo de inatividade do /clan lookup) se o jogador está inativo a mais de X dias
+    dias: 30
+    linha: 1 #A placa tem 4 linhas, a contagem começa do 0, ou seja, na linha 0, por exemplo, está escrito [Lockette], e na linha 1 o nome do jogador. Isso fará com que ao clicar com o removedor de itens na placa ele verifique se o jogador está inativo
+comandos:
+  bloqueados:
+  - "/pardon"
+  - "/clan ff allow"
+  - "/clan ally"
+  spawn: "warp spawn" #player enviara o comando quando clicar no item da staff que teleporta para o spawn
+  STAFFBRDemote: #console enviara o comando
+  - "mcremove {player}"
+  infoDeHit: #item da staff que verifica os hits
+    on: #player enviara os comandos
+    - "ungod"
+    - "voff"
+    off: #player enviara os comandos
+    - "god"
+    - "von"
+permissoes: #youtuber|construcao|coordenacao|moderacao|administracao|subdirecao|direcao|vicepresidencia|presidencia
+  youtuber:
+  - "pdgh.youtuber"
+  - "-coloredtags.*"
+  - "coloredtags.youtuber"
+  - "legendchat.color.allcolors"
+  - "legendchat.channel.local.nodelay"
+  - "legendchat.channel.local.free"
+  - "legendchat.channel.local.chat"
+  - "-legendchat.channel.local.blockwrite"
+  - "legendchat.channel.global.nodelay"
+  - "legendchat.channel.global.free"
+  - "legendchat.channel.global.chat"
+  - "-legendchat.channel.global.blockwrite"
+  construcao:
+  - "pdgh.construtor"
+  - "-coloredtags.*"
+  - "coloredtags.construtor"
+  - "legendchat.color.allcolors"
+  - "legendchat.channel.local.nodelay"
+  - "legendchat.channel.local.free"
+  - "legendchat.channel.local.chat"
+  - "-legendchat.channel.local.blockwrite"
+  - "legendchat.channel.global.nodelay"
+  - "legendchat.channel.global.free"
+  - "legendchat.channel.global.chat"
+  - "-legendchat.channel.global.blockwrite"
+  coordenacao:
+  - "pdgh.coordenador"
+  - "-coloredtags.*"
+  - "coloredtags.coordenador"
+  - "legendchat.color.allcolors"
+  - "legendchat.channel.local.nodelay"
+  - "legendchat.channel.local.free"
+  - "legendchat.channel.local.chat"
+  - "-legendchat.channel.local.blockwrite"
+  - "legendchat.channel.global.nodelay"
+  - "legendchat.channel.global.free"
+  - "legendchat.channel.global.chat"
+  - "-legendchat.channel.global.blockwrite"
+  moderacao:
+  - "pdgh.coordenador"
+  - "pdgh.moderador"
+  - "commandbook.teleport"
+  - "commandbook.teleport.other"
+  - "OpenInv.openinv"
+  - "OpenInv.openself"
+  - "-coloredtags.*"
+  - "coloredtags.moderador"
+  - "legendchat.color.allcolors"
+  - "legendchat.channel.local.nodelay"
+  - "legendchat.channel.local.free"
+  - "legendchat.channel.local.chat"
+  - "-legendchat.channel.local.blockwrite"
+  - "legendchat.channel.global.nodelay"
+  - "legendchat.channel.global.free"
+  - "legendchat.channel.global.chat"
+  - "-legendchat.channel.global.blockwrite"
+  administracao:
+  - "pdgh.coordenador"
+  - "pdgh.moderador"
+  - "pdgh.admin"
+  - "commandbook.teleport"
+  - "commandbook.teleport.other"
+  - "commandbook.flight.toggle"
+  - "commandbook.return"
+  - "commandbook.speed.flight"
+  - "commandbook.clear"
+  - "commandbook.god"
+  - "commandbook.god.auto-invincible"
+  - "OpenInv.*"
+  - "plotme.*"
+  - "lockette.admin.break"
+  - "lockette.admin.bypass"
+  - "booscooldowns.STAFF"
+  - "alphachest.chest"
+  - "magiccarpet.mc"
+  - "magiccarpet.mc.*"
+  - "ChestShop.shop.create"
+  - "worldguard.region.bypass.*"
+  - "bukkit.command.tps"
+  - "worldedit.navigation.thru.tool"
+  - "worldedit.navigation.jump.tool"
+  - "mod.macros.*"
+  - "-coloredtags.*"
+  - "coloredtags.admin"
+  - "pdgh.vip"
+  - "legendchat.color.allcolors"
+  - "legendchat.channel.local.nodelay"
+  - "legendchat.channel.local.free"
+  - "legendchat.channel.local.chat"
+  - "-legendchat.channel.local.blockwrite"
+  - "legendchat.channel.global.nodelay"
+  - "legendchat.channel.global.free"
+  - "legendchat.channel.global.chat"
+  - "-legendchat.channel.global.blockwrite"
+  subdirecao:
+  - "pdgh.coordenador"
+  - "pdgh.moderador"
+  - "pdgh.admin"
+  - "pdgh.subdiretor"
+  - "lockette.*" #add dia 18/05/2016
+  - "vpack.*" #add dia 21/05/2016
+  - "stargate.create" #add dia 09/09/2015
+  - "stargate.destroy" #add dia 09/09/2015
+  - "worldedit.selection.pos" #add dia 09/09/2015
+  - "worldedit.region.set" #add dia 09/09/2015
+  - "simpleclans.admin.all-seeing-eye" #add dia 29/01/2016
+  - "simpleclans.mod.disband" #add dia 29/01/2016
+  - "commandbook.teleport"
+  - "commandbook.teleport.other"
+  - "commandbook.flight.toggle"
+  - "commandbook.return"
+  - "commandbook.speed.flight"
+  - "commandbook.clear"
+  - "commandbook.god"
+  - "commandbook.god.auto-invincible"
+  - "OpenInv.*"
+  - "plotme.*"
+  - "lockette.admin.break"
+  - "lockette.admin.bypass"
+  - "booscooldowns.STAFF"
+  - "alphachest.chest"
+  - "magiccarpet.mc"
+  - "magiccarpet.mc.*"
+  - "ChestShop.shop.create"
+  - "worldguard.region.bypass.*"
+  - "bukkit.command.tps"
+  - "worldedit.navigation.thru.tool"
+  - "worldedit.navigation.jump.tool"
+  - "mod.macros.*"
+  - "-coloredtags.*"
+  - "coloredtags.subdiretor"
+  - "pdgh.vip"
+  - "legendchat.color.allcolors"
+  - "legendchat.channel.local.nodelay"
+  - "legendchat.channel.local.free"
+  - "legendchat.channel.local.chat"
+  - "-legendchat.channel.local.blockwrite"
+  - "legendchat.channel.global.nodelay"
+  - "legendchat.channel.global.free"
+  - "legendchat.channel.global.chat"
+  - "-legendchat.channel.global.blockwrite"
+#  - "commandbook.give" #removido dia 29/12/2015
+  direcao:
+  - "pdgh.coordenador"
+  - "pdgh.moderador"
+  - "pdgh.admin"
+  - "pdgh.subdiretor"
+  - "pdgh.diretor"
+  - "lockette.*" #add dia 18/05/2016
+  - "vpack.*" #add dia 21/05/2016
+  - "stargate.create" #add dia 09/09/2015
+  - "stargate.destroy" #add dia 09/09/2015
+  - "worldedit.selection.pos" #add dia 09/09/2015
+  - "worldedit.region.set" #add dia 09/09/2015
+  - "simpleclans.admin.all-seeing-eye" #add dia 29/01/2016
+  - "simpleclans.mod.disband" #add dia 29/01/2016
+  - "commandbook.teleport"
+  - "commandbook.teleport.other"
+  - "commandbook.flight.toggle"
+  - "commandbook.return"
+  - "commandbook.speed.flight"
+  - "commandbook.clear"
+  - "commandbook.god"
+  - "commandbook.god.auto-invincible"
+  - "OpenInv.*"
+  - "plotme.*"
+  - "lockette.admin.break"
+  - "lockette.admin.bypass"
+  - "booscooldowns.STAFF"
+  - "alphachest.chest"
+  - "magiccarpet.mc"
+  - "magiccarpet.mc.*"
+  - "ChestShop.shop.create"
+  - "worldguard.region.bypass.*"
+  - "bukkit.command.tps"
+  - "worldedit.navigation.thru.tool"
+  - "worldedit.navigation.jump.tool"
+  - "mod.macros.*"
+  - "-coloredtags.*"
+  - "coloredtags.diretor"
+  - "pdgh.vip"
+  - "legendchat.color.allcolors"
+  - "legendchat.channel.local.nodelay"
+  - "legendchat.channel.local.free"
+  - "legendchat.channel.local.chat"
+  - "-legendchat.channel.local.blockwrite"
+  - "legendchat.channel.global.nodelay"
+  - "legendchat.channel.global.free"
+  - "legendchat.channel.global.chat"
+  - "-legendchat.channel.global.blockwrite"
+#  - "commandbook.give" #removido dia 29/12/2015
+  vicepresidencia:
+  - "pdgh.coordenador"
+  - "pdgh.moderador"
+  - "pdgh.admin"
+  - "pdgh.subdiretor"
+  - "pdgh.diretor"
+  - "pdgh.vicepresidente"
+  - "lockette.*" #add dia 18/05/2016
+  - "vpack.*" #add dia 21/05/2016
+  - "stargate.create" #add dia 09/09/2015
+  - "stargate.destroy" #add dia 09/09/2015
+  - "worldedit.selection.pos" #add dia 09/09/2015
+  - "worldedit.region.set" #add dia 09/09/2015
+  - "simpleclans.admin.all-seeing-eye" #add dia 29/01/2016
+  - "simpleclans.mod.disband" #add dia 29/01/2016
+  - "commandbook.teleport"
+  - "commandbook.teleport.other"
+  - "commandbook.flight.toggle"
+  - "commandbook.return"
+  - "commandbook.speed.flight"
+  - "commandbook.clear"
+  - "commandbook.god"
+  - "commandbook.god.auto-invincible"
+  - "OpenInv.*"
+  - "plotme.*"
+  - "lockette.admin.break"
+  - "lockette.admin.bypass"
+  - "booscooldowns.STAFF"
+  - "alphachest.chest"
+  - "magiccarpet.mc"
+  - "magiccarpet.mc.*"
+  - "ChestShop.shop.create"
+  - "worldguard.region.bypass.*"
+  - "bukkit.command.tps"
+  - "worldedit.navigation.thru.tool"
+  - "worldedit.navigation.jump.tool"
+  - "mod.macros.*"
+  - "-coloredtags.*"
+  - "coloredtags.vicepresidente"
+  - "pdgh.vip"
+  - "legendchat.color.allcolors"
+  - "legendchat.channel.local.nodelay"
+  - "legendchat.channel.local.free"
+  - "legendchat.channel.local.chat"
+  - "-legendchat.channel.local.blockwrite"
+  - "legendchat.channel.global.nodelay"
+  - "legendchat.channel.global.free"
+  - "legendchat.channel.global.chat"
+  - "-legendchat.channel.global.blockwrite"
+#  - "commandbook.give" #removido dia 29/12/2015
+  presidencia:
+  - "pdgh.coordenador"
+  - "pdgh.moderador"
+  - "pdgh.admin"
+  - "pdgh.subdiretor"
+  - "pdgh.diretor"
+  - "pdgh.vicepresidente"
+  - "pdgh.presidente"
+  - "pdgh.op"
+  - "lockette.*" #add dia 18/05/2016
+  - "stargate.create" #add dia 09/09/2015
+  - "stargate.destroy" #add dia 09/09/2015
+  - "worldedit.selection.pos" #add dia 09/09/2015
+  - "worldedit.region.set" #add dia 09/09/2015
+  - "simpleclans.admin.all-seeing-eye" #add dia 29/01/2016
+  - "simpleclans.mod.disband" #add dia 29/01/2016
+  - "op"
+  - "commandbook.*"
+  - "xauth.*"
+  - "worldguard.*"
+  - "worldedit.*"
+  - "permissions.*"
+  - "nocheatplus.*"
+  - "phatloots.*"
+  - "multiverse.*" #add dia 29/01/2016
+  - "simpleclans.*" #add dia 29/01/2016
+  - "vpack.*" #add dia 29/01/2016
+  - "uhome.*" #add dia 29/01/2016
+  - "chestshop.*" #add dia 29/01/2016
+  - "stargate.*" #add dia 29/01/2016
+  - "OpenInv.*"
+  - "plotme.*"
+  - "lockette.admin.break"
+  - "lockette.admin.bypass"
+  - "booscooldowns.STAFF"
+  - "alphachest.chest"
+  - "magiccarpet.mc"
+  - "magiccarpet.mc.*"
+  - "ChestShop.shop.create"
+  - "worldguard.region.bypass.*"
+  - "bukkit.command.tps"
+  - "worldedit.navigation.thru.tool"
+  - "worldedit.navigation.jump.tool"
+  - "bukkit.command.*"
+  - "bukkit.*"
+  - "mod.macros.*"
+  - "-coloredtags.*"
+  - "coloredtags.presidente"
+  - "pdgh.vip"
+  - "legendchat.color.allcolors"
+  - "legendchat.channel.local.nodelay"
+  - "legendchat.channel.local.free"
+  - "legendchat.channel.local.chat"
+  - "-legendchat.channel.local.blockwrite"
+  - "legendchat.channel.global.nodelay"
+  - "legendchat.channel.global.free"
+  - "legendchat.channel.global.chat"
+  - "-legendchat.channel.global.blockwrite"
+mensagens:
+  onSTAFFJoinDelayToShow: 50 #50 ticks. 20 ticks=1 segundo
+  onSTAFFJoin:
+  - " "
+  - "&3[mchiappinam-STAFF] &fVocê é {cargo}! Tenha um excelente trabalho!"
+  - " "
+  - "&3[Atualização-STAFF] &fPrezado(a) {cargo},"
+  - "&3[Atualização-STAFF] &fCaso suas permissões estejam desatualizadas, digite o comando /staff att"
+  - " "
+  coord: #/staff se o jogador for coord
+  - "&cVocê é apenas um Coordenador. Você está em fase de testes. Seja promovido para ter acesso para as opções mais avançadas."
+  - "&c»»»A maioria dos comandos da STAFF são enviados automaticamente para a central. TUDO o que você faz está registrado em nosso sistema inteligênte de log."
+  - "&c»»»Não use comandos cujo você não sabe usar ou não sabe se tem permissão para usar. A permissão citada não é apenas no jogo e sim para um superior, de preferência da presidência."
+  - "&c»»»Não brinque com os comandos!"
+  mod: #/staff mod
+  - "&3&lPDGH STAFF HELP - MOD (&eA-Z&3):"
+  - "» &c/ban <nick> <tempo> (motivo) -&a- Da ban em algum jogador."
+  - "» &c/checkbans <nick> -&a- Verifica se o jogador está banido."
+  - "» &2/fake -&a- Verifica os jogadores que estão utilizando o mesmo IP."
+  - "» &2/fake <nick> -&a- Verifica o jogador mencionado se ele tem outra conta com o mesmo IP."
+  - "» &c/kick <nick> -&a- Expulsa o jogador mencionado do servidor."
+  - "» &c/say <mensagem> -&a- Anuncia uma mensagem para todos os jogadores."
+  - "» &4/ssay <mensagem> -&a- Anuncia uma mensagem destacada para todos os jogadores."
+  - "» &c/staff msg <mensagem> -&a- Anuncia uma mensagem destacada para todos os staffers acima de mod."
+  - "» &c/v -&a- Ativa/desativa a invisibilidade."
+  - "&c»»»A maioria dos comandos da STAFF são enviados automaticamente para a central. TUDO o que você faz está registrado em nosso sistema inteligênte de log."
+  - "&c»»»Não use comandos cujo você não sabe usar ou não sabe se tem permissão para usar. A permissão citada não é apenas no jogo e sim para um superior, de preferência da presidência."
+  - "&c»»»Não brinque com os comandos!"
+  admin: #/staff admin
+  - "&3&lPDGH STAFF HELP - &c&lADMIN &3&l(&eA-Z&3&l):"
+  - "» &c/apin desbloquear -&a- Desbane o jogador que está banido temporariamente por exceder as tentativas de recuperação do PIN."
+  - "» &4/apin unregister -&a- Reseta o PIN do jogador."
+  - "» &4/autos fshutdown -&a- Reinicia o servidor manualmente, conectando todos para o lobby."
+  - "» &c/ban <nick> <tempo> (motivo) -&a- Da ban em algum jogador."
+  - "» &c/bolao cancelar -&a- Cancela o bolão atual, fazendo com que o money é devolvido."
+  - "» &c/bolao finalizar -&a- Finaliza o bolão atual, fazendo com que exista algum vencedor."
+  - "» &c/checkbans <nick> -&a- Verifica se o jogador está banido."
+  - "» &2/clear -a -&a- Limpa seu inventário."
+  - "» &2/crash <nick> -a -&a- Crasha o Minecraft."
+  - "» &2/fake -&a- Verifica os jogadores que estão utilizando o mesmo IP."
+  - "» &2/fake <nick> -&a- Verifica o jogador mencionado se ele tem outra conta com o mesmo IP."
+  - "» &2/fly -&a- Ativa/desativa o modo de voar."
+  - "» &4/i <item|id> <quantidade> -&a- Te da itens. (Desativado)"
+  - "» &c/kick <nick> -&a- Expulsa o jogador mencionado do servidor."
+  - "» &4/gladiador forcestart -&a- Inicia o evento Gladiador."
+  - "» &4/gladiador forcestop -&a- Cancela o evento MiniGlad."
+  - "» &c/god|ungod -&a- Ativa/desativa o modo Deus. (Ativo automaticamente ao entrar no servidor)"
+  - "» &c/miniglad forcestart -&a- Inicia o evento MiniGlad."
+  - "» &c/miniglad forcestop -&a- Cancela o evento MiniGlad."
+  - "» &c/ret -&a- Retorna nas últimas posições."
+  - "» &c/say <mensagem> -&a- Anuncia uma mensagem para todos os jogadores."
+  - "» &4/setpvp <nick> <matar|morrer> <quantidade> -&a- Define a quantidade de jogadores que matou ou morreu. (RankPvP)"
+  - "» &c/speed flight <0-10> -&a- Define sua velocidade de vôo. Padrão: 1"
+  - "» &4/ssay <mensagem> -&a- Anuncia uma mensagem destacada para todos os jogadores."
+  - "» &c/staff msg <mensagem> -&a- Anuncia uma mensagem destacada para todos os staffers acima de mod."
+  - "» &4/tp <nick> -&a- Se teleporta para o jogador mencionado."
+  - "» &c/v -&a- Fica invisível."
+  - "» &c/x1 cancelar -&a- Cancela o x1 atual, devolvendo o money."
+  - "&c»»»A maioria dos comandos da STAFF são enviados automaticamente para a central. TUDO o que você faz está registrado em nosso sistema inteligênte de log."
+  - "&c»»»Não use comandos cujo você não sabe usar ou não sabe se tem permissão para usar. A permissão citada não é apenas no jogo e sim para um superior, de preferência da presidência."
+  - "&c»»»Não brinque com os comandos!"
+  help: #/staff
+  - "01» &2/staff admin -&a- Mostra os comandos de outros plugins da STAFF IG para os cargos especiais."
+  - "02» &2/staff mod -&a- Mostra os comandos de outros plugins da STAFF IG para os cargos básicos."
+  - "03» &4/staff promote <nick> <youtuber|construcao|coordenacao|moderacao|administracao|subdirecao|direcao|vicepresidencia|presidencia> -&a- Adiciona ou promove algum jogador à STAFF."
+  - "04» &4/staff demote <nick> -&a- Retira o jogador da STAFF."
+  - "05» &4/staff bdemote <nick> -&a- Retira o jogador da STAFF e o mesmo leva ban 00."
+  - "06» &4/staff brdemote <nick> -&a- Retira o jogador da STAFF, o mesmo leva ban 00 e é semi-resetado."
+  - "&c»»»A maioria dos comandos da STAFF são enviados automaticamente para a central. TUDO o que você faz está registrado em nosso sistema inteligênte de log."
+  - "&c»»»Não use comandos cujo você não sabe usar ou não sabe se tem permissão para usar. A permissão citada não é apenas no jogo e sim para um superior, de preferência da presidência."
+  - "&c»»»Não brinque com os comandos!"

@@ -1,0 +1,19 @@
+name: PDGHSTAFF
+main: me.mchiappinam.pdghstaff.Main
+version: 1.2
+author: mchiappinam
+website: https://hostload.com.br && http://pdgh.com.br/
+depends: [Vault,PermissionsEx,SimpleClans]
+commands:
+   staff:
+      description: Info.
+      usage: /<command>
+   kill:
+      description: Info.
+      usage: /<command>
+   ativarwhitelist:
+      description: Info.
+      usage: /<command>
+   desativarwhitelist:
+      description: Info.
+      usage: /<command>
